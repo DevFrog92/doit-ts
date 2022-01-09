@@ -2,7 +2,8 @@
 import { split } from "./split";
 import { join } from "./join";
 import { range } from "./range";
-import { fold } from "./fold"
+import { fold } from "./fold";
+import { filter } from "./filter";
 
 // let numbers = [1, 2, 3];
 let strings = ['one', 'two', 'three'];
@@ -81,4 +82,28 @@ let numbers: number[] = range(1, 100 + 1);
 let result = fold(numbers, (result, val) => result + val, 0);
 console.log(result)
 
+let oddSum:number = 0;
 
+for (let i = 1; i <= 100; i += 2){
+  oddSum += i;
+}
+
+console.log(oddSum);
+
+const isOdd = (n: number): boolean => n % 2 !== 0;
+const isEvent = (n: number): boolean => n % 2 === 0;
+
+let resultOdd = fold(
+  filter(numbers, isOdd),
+  (result, value) => result + value, 0
+);
+
+let resultEven = fold(
+  filter(numbers, isEvent),
+  (result, value) => result + value, 0
+);
+
+console.log(resultOdd, resultEven);
+
+// console.log(filter<number>(numbers, isOdd));
+// console.log(filter<number>(numbers, isEvent));
