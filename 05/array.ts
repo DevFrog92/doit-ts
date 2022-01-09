@@ -1,6 +1,7 @@
 // array in ts
 import { split } from "./split";
 import { join } from "./join";
+import { range } from "./ragne";
 
 let numbers = [1, 2, 3];
 let strings = ['one', 'two', 'three'];
@@ -34,3 +35,34 @@ for (let i in objects) {
 for (let i of numArray) {
   console.log(i)
 }
+
+// generic
+
+const arrayLength = <T>(array: T[]): number => array.length;
+const isEmpty = <T>(array: T[]): Boolean => arrayLength<T>(array) === 0;
+
+console.log(
+  arrayLength(numArray),
+  arrayLength(strArray),
+  arrayLength(personArray),
+  isEmpty(numArray),
+  isEmpty([])
+);
+
+const identity = <T>(n: T): T => n;
+
+console.log(
+  identity<boolean>(true),
+  identity(true),
+  identity('hello'),
+)
+
+// generic 형태로 구현된 함수는 원칙적으로 '함수이름'<타입변수>(매개변수)처럼 명시해 주어야 한다.
+
+const normal = (cb: (number) => number): void => { };
+const error = (cb: (arg:number, number?) => number): void => { }
+const fixed = (cb: (a: number, number?) => number): void => { }
+const fun = <T>(cb: (arg: T, i?: number) => number): void => { };
+
+
+console.log(range(1, 10));
