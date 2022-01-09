@@ -4,6 +4,7 @@ import { join } from "./join";
 import { range } from "./range";
 import { fold } from "./fold";
 import { filter } from "./filter";
+import { map } from "./map";
 
 // let numbers = [1, 2, 3];
 let strings = ['one', 'two', 'three'];
@@ -105,5 +106,10 @@ let resultEven = fold(
 
 console.log(resultOdd, resultEven);
 
-// console.log(filter<number>(numbers, isOdd));
-// console.log(filter<number>(numbers, isEvent));
+let resultSquare = fold(
+  map(numbers, value => value ** 2),
+  (result, value) => result + value,
+  0
+)
+
+console.log(resultSquare);
