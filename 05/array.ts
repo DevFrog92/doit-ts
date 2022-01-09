@@ -1,9 +1,10 @@
 // array in ts
 import { split } from "./split";
 import { join } from "./join";
-import { range } from "./ragne";
+import { range } from "./range";
+import { fold } from "./fold"
 
-let numbers = [1, 2, 3];
+// let numbers = [1, 2, 3];
 let strings = ['one', 'two', 'three'];
 let objects = { name: "yong", age: 20 };
 
@@ -17,8 +18,8 @@ type IPerson = {
 
 let personArray: IPerson[] = [{ name: 'yong' }, { name:"hello", age: 10 }];
 
-console.log(numbers, strings)
-console.log(Array.isArray(numbers), Array.isArray(objects));
+// console.log(numbers, strings)
+// console.log(Array.isArray(numbers), Array.isArray(objects));
 console.log(split("hello"), split("h_e_l_l_o", "_"));
 console.log(join(split("hello"),), join(split("h_e_l_l_o", "_")));
 console.log("hello".split("").join(''))
@@ -66,3 +67,18 @@ const fun = <T>(cb: (arg: T, i?: number) => number): void => { };
 
 
 console.log(range(1, 10));
+
+// 명령형 프로그래밍 방식
+let sum: number = 0;
+for (let val = 1; val <= 100;){
+  sum += val++
+}
+
+console.log(sum);
+
+// 선언형 프로그래밍 방식 - 데이터 생성과 가공 과정을 분리
+let numbers: number[] = range(1, 100 + 1);
+let result = fold(numbers, (result, val) => result + val, 0);
+console.log(result)
+
+
