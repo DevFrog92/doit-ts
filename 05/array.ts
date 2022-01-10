@@ -113,3 +113,20 @@ let resultSquare = fold(
 )
 
 console.log(resultSquare);
+
+const arrayNumber: number[] = range(1, 11);
+const half = arrayNumber.length / 2;
+
+let beforeHalf = arrayNumber.filter(value => value < half);
+console.log(beforeHalf);
+
+// const testObj = {}
+for (let i = 0; i < 10; i++){
+  const key = i;
+  const value = i * i;
+  const testObj = {
+    [key]: value
+  }
+
+  console.log(testObj)
+}
