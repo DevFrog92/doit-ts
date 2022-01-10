@@ -5,6 +5,7 @@ import { range } from "./range";
 import { fold } from "./fold";
 import { filter } from "./filter";
 import { map } from "./map";
+import { pureSort } from "./pureSort"
 
 // let numbers = [1, 2, 3];
 let strings = ['one', 'two', 'three'];
@@ -130,3 +131,8 @@ for (let i = 0; i < 10; i++){
 
   console.log(testObj)
 }
+
+let beforeSort = [5, 3, 2, 1, 9];
+const afterSort = pureSort(beforeSort)
+
+console.log(beforeSort, afterSort);
