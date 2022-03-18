@@ -6,7 +6,7 @@
     "checkJs": true,
     "target": "es5",
     "lib": ["es2015", "dom", "dom.iterable"],
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "strict": true,
     "strictFunctionTypes": true,
     "moduleResolution": "node",
@@ -15,6 +15,5 @@
     "sourceMap": true,
     "downlevelIteration": true,
     "paths": {"*": ["node_modules/*"]}
-  },
-  "include": ["src/**/*"]
+  }
 }
