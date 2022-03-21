@@ -1,0 +1,13 @@
+# typescript
+- chapter 03 - variable declaration
+  - javascript type vs typescript type
+    - Number : number
+    - String : string
+    - Boolean : boolean
+    - Object : object
+  - `let` & `const`
+  - type annotation and `let`
+  - type inference
+  - `any` >>> `number, boolean, string` / `object` >>> `interface, class ...` >>> `undefined`
+  - `interface` & `optional property` & `anonymous interface`
+  - 
