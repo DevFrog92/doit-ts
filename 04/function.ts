@@ -34,16 +34,17 @@ init(() => 1 + 2)
 
 type Person = { name: string, age: number }
 const makePerson = (name: string, age: number = 10): Person => ({ name, age });
-
+const printPerson = ({name, age}: Person): void => console.log(`name: ${name}, age: ${age}`)
 console.log(makePerson('Jack'))
 console.log(makePerson('Jack',30))
+printPerson({name:'hello test code', age:120})
 
 const dyObj = {}
 const key = "hello"
-// dyObj[key] = 1
+// dyObj[key] = 1ㅊㅇ
 console.log(dyObj)
 
-
+// indexable type
 type KeyValueType = {
   [key: string]: string;
 }
@@ -52,3 +53,8 @@ const makeObject = (key: string, value: string): KeyValueType => ({ [key]: value
 
 console.log(makeObject('name','Jack'))
 console.log(makeObject('nameTwo','Jhone'))
+
+const add1 = (a: number, b: number): number => a + b
+const add2 = (a: number): (number: number) => number => (b: number): number => a + b
+console.log(add2(1)(2))
+

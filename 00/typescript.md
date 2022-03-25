@@ -20,3 +20,8 @@
   - execution statement & expression statement
   - multi-paradigm language
   - compound statement
+  - hight-order function
+  - partial application & partially applied function
+  - indexable type
+  - class & method & this
+  - method chain
