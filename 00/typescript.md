@@ -10,4 +10,13 @@
   - type inference
   - `any` >>> `number, boolean, string` / `object` >>> `interface, class ...` >>> `undefined`
   - `interface` & `optional property` & `anonymous interface`
-  - 
+  - `implements` & `abstract`
+  - type assertion
+    - ```(<type>object)```
+    - ```(object as type)```
+- chapter 04 - function
+  - parameter & arguments
+  - eager evaluation & lazy evaluation
+  - execution statement & expression statement
+  - multi-paradigm language
+  - compound statement
