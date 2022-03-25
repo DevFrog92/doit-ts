@@ -1,8 +1,8 @@
 // 함수 시그니처
 
-type stringNumberfunc = (string, number) => void;
+type stringNumberFunc = (name:string, age:number) => void
 
-let printMe: stringNumberfunc = function (name: string, age: number): void {
+let printMe: stringNumberFunc = function (name: string, age: number): void {
   console.log(`${name} ${age}`);
 }
 
@@ -15,20 +15,21 @@ console.log(result);
 
 const init = (callback: () => void): void => {
   console.log("first")
-  callback()
+  const response = callback()
+  console.log(response)
   console.log("third")
 }
 
-init(() => console.log("second, call back"))
+init(() => 1 + 2)
 
-const calc = (value: number, callback: (number) => void): void => {
-  let add = (a, b) => a + b;
-  function multiply(a, b) { return a + b }
-  let result = multiply(add(1, 2), value)
-  callback(result)
-}
+// const calc = (value: number, callback: (number) => void): void => {
+//   let add = (a, b) => a + b;
+//   function multiply(a, b) { return a + b }
+//   let result = multiply(add(1, 2), value)
+//   callback(result)
+// }
 
-calc(30, (result: number) => console.log(`result is ${result}`));
+// calc(30, (result: number) => console.log(`result is ${result}`));
 
 
 type Person = { name: string, age: number }
@@ -39,7 +40,7 @@ console.log(makePerson('Jack',30))
 
 const dyObj = {}
 const key = "hello"
-dyObj[key] = 1
+// dyObj[key] = 1
 console.log(dyObj)
 
 
