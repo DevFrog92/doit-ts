@@ -33,7 +33,7 @@ for (let i = 0; i < numArray.length; i++){
 }
 
 for (let i in objects) {
-  console.log(`${i}: ${objects[i]}`);
+  // console.log(`${i}: ${objects[i]}`);
 }
 
 for (let i of numArray) {
@@ -63,9 +63,9 @@ console.log(
 
 // generic 형태로 구현된 함수는 원칙적으로 '함수이름'<타입변수>(매개변수)처럼 명시해 주어야 한다.
 
-const normal = (cb: (number) => number): void => { };
-const error = (cb: (arg:number, number?) => number): void => { }
-const fixed = (cb: (a: number, number?) => number): void => { }
+const normal = (cb: (number: number) => number): void => { };
+const error = (cb: (arg:number, number?: number) => number): void => { }
+const fixed = (cb: (a: number, number?: number) => number): void => { }
 const fun = <T>(cb: (arg: T, i?: number) => number): void => { };
 
 
