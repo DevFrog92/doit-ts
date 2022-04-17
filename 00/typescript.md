@@ -25,3 +25,5 @@
   - indexable type
   - class & method & this
   - method chain
+- chapter 05 - array
+- chapter 06 - iterator & generator
