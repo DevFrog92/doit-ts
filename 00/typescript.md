@@ -27,3 +27,4 @@
   - method chain
 - chapter 05 - array
 - chapter 06 - iterator & generator
+  - semi-coroutine
