@@ -16,6 +16,5 @@
     "downlevelIteration": true,
     "useUnknownInCatchVariables": false, // catch statement에서 사용되는 error parameter
     "paths": {"*": ["node_modules/*"]}
-  },
-  "include": ["src/**/*"]
+  }
 }
