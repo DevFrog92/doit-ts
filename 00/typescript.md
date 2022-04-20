@@ -31,3 +31,4 @@
 - chapter 07 - promise & async/await
 - chapter 08 - functional programming
 - chapter 09 - ramda
+- chapter 10 - generic programming
